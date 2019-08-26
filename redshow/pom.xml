@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.redshow</groupId>
+	<artifactId>redshow</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>redshow Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+		<spring.version>5.1.9.RELEASE</spring.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!--配置webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!--配置spring jdbc,用来加载DataSourceTransactionManager -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!--配置切面的jar包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!--mybatis，用来加载SqlSessionFactoryBean和MapperScannerConfigurer -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<!--数据库驱动包 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.38</version>
+		</dependency>
+		<!--日志文件 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.22</version>
+		</dependency>
+
+		<!--json处理工具包 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.59</version>
+		</dependency>
+		<!-- 连接池，用来加载DruidDataSource -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.19</version>
+		</dependency>
+		<!--javaScript标签库 -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- mybatis分页插件 -->
+		<dependency>
+		    <groupId>com.github.pagehelper</groupId>
+		    <artifactId>pagehelper</artifactId>
+		    <version>5.1.10</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>redshow</finalName>
+	</build>
+</project>

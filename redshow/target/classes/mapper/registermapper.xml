@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.redshow.mapper.RegisterMapper">
+	
+	<select id="queryLocal" parameterType="java.lang.Integer" resultType="com.redshow.dto.Local">
+		select codeid,parentid,cityName from area_data where parentid=#{id}
+	</select>
+	
+	<select id="query" parameterType="java.lang.Long" resultType="java.lang.String">
+		select cityName from area_data where codeid=#{id}
+	</select>
+	
+	<select id="getUsersByName" parameterType="java.lang.String" resultType="java.lang.Integer">
+		select id from user where username=#{name}
+	</select>
+	
+	<update id="register" parameterType="com.redshow.dto.Users">
+		insert into user(username,password,salt,sex,age,email,phone,address,state) 
+		values(#{user.username},#{user.password},#{user.salt},#{user.sex},#{user.age},#{user.email},#{user.phone},#{user.address},#{user.state})
+	</update>
+	
+	<update id="registerDefaultRole">
+		insert into user_role (roleid,userid) values(#{roleId},#{userid})
+	</update>
+	
+	
+	
+</mapper>

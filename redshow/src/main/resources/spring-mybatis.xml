@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 数据源 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" 
+	    init-method="init" destroy-method="close">
+		<property name="url" value="jdbc:mysql://localhost:3306/homexiutianxiang?serverTimezone=Asia/Shanghai"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="Xu1234567@"></property>
+<!-- 		<property name="initialSize" value="5"></property>
+		<property name="maxActive" value="10"></property>
+		<property name="minIdle" value="8"></property>
+		<property name="maxWait" value="60000"></property>
+		<property name="poolPreparedStatements" value="false"></property>
+		<property name="validationQuery" value="select 1"></property>
+		<property name="testWhileIdle" value="true"></property> -->
+	</bean>
+	
+	<bean id="pageHelper" class="com.github.pagehelper.PageInterceptor">
+		<property name="properties">
+			<props>
+				<prop key="helperDialect">mysql</prop>
+				<prop key="reasonable">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 分页插件部分 -->
+	<!-- sqlSessionFactoryBean工厂 -->
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+		<!-- 分页插件部分 -->
+		<property name="plugins">
+			<array>
+				<ref bean="pageHelper"/> 
+			</array>
+		</property>
+		
+	</bean>
+	<!-- 注解扫描 -->	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"></property>
+		<property name="basePackage" value="com.redshow.mapper"></property>
+	</bean>
+	
+	<!-- 事务配置 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<!-- 配置使用事务层的注解扫描 -->
+	<context:component-scan base-package="com.redshow.service"></context:component-scan>
+</beans>

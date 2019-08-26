@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.redshow.mapper.UserManagerMapper">
+	<!-- 查询部分 -->
+	<!-- 查询所有的用户 -->
+	<select id="queryUsers" resultType="com.redshow.dto.Users"
+		parameterType="java.util.Map">
+		select u.id id,u.username
+		username,sex,age,email,phone,address,r.rolename rolename from user
+		u,role r,user_role ur where u.id=ur.userid and ur.roleid=r.id
+		<if test="map !=null and map.name !=null and'' != map.name">
+			and u.username like concat("%",#{map.name},"%")
+		</if>
+		<if test="map !=null and '' != map.maxage">
+			and age <![CDATA[<]]>=
+			#{map.maxage}
+		</if>
+		<if test="map !=null and  map.name !=null and '' != map.minage">
+			and age >= #{map.minage}
+		</if>
+	</select>
+	
+	
+	<!-- 删除部分 -->
+	<!-- 查询用户的id -->
+	<select id="getUsersId" resultType="java.lang.Integer" parameterType="java.lang.String">
+		select id from user where username=#{name}
+	</select>
+	<!-- 删除用户的信息 user表 -->
+	<update id="deleteUers" parameterType="java.lang.Integer">
+		delete from user where id=#{userid}
+	</update>
+	<!-- 删除用户对应的角色信息 user_role表 -->
+	<update id="deleteRole_User" parameterType="java.lang.Integer">
+		delete from user_role where userid=#{userid}
+	</update>
+	
+	<!-- 修改内容 -->
+	<!-- 获取用户信息 -->
+	<select id="getUserInfo" parameterType="java.lang.String" resultType="com.redshow.dto.Users">
+		select u.id id,u.username
+		username,sex,age,email,phone,address,r.rolename rolename from user
+		u,role r,user_role ur where u.id=ur.userid and ur.roleid=r.id and username=#{username}
+	</select>
+	<!-- 修改用户信息 user表 -->
+	<update id="editUser">
+		update user set username=#{user.username},sex=#{user.sex},age=#{user.age},
+		email=#{user.email},phone=#{user.phone},address=#{user.address} where id=#{id}
+	</update>
+	<!-- 修改用户信息 user_role表 -->
+	<update id="editUser_Role">
+		update user_role set roleid=#{roleid} where userid=#{userid}
+	</update>
+	
+	
+
+
+
+
+
+</mapper>
