@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="title">公告展示</div>
+		<div class="userSearc">
+			<div class="search-left">
+				<span>
+					公告名：<input type="text" id="username" value="" />
+				</span>
+				<span>
+					<input type="button" class="btn btn-group-xs" id="search" value="查询" />
+				</span>
+			</div>
+			<div class="search-right">
+				<button id="addnotice" class="btn btn-primary" data-toggle="modal" data-target="#addModal">添加公告</button>
+			</div>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>公告标题</th>
+					<th>公告类型</th>
+					<th>公告内容</th>
+					<th>公告发布日期</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>标题</td>
+					<td>类型</td>
+					<td>内容</td>
+					<td>日期</td>
+					<td>
+						<button id="editnotice" class="btn btn-primary" data-toggle="modal" data-target="#editModal">修改公告</button>
+						<button id="delnotice" class="btn btn-primary">删除公告</button>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>标题</td>
+					<td>类型</td>
+					<td>内容</td>
+					<td>日期</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="delnotice" class="btn btn-primary">删除公告</button>
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>标题</td>
+					<td>类型</td>
+					<td>内容</td>
+					<td>日期</td>
+					<td>
+						<a href="#" class="editUser">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="delnotice" class="btn btn-primary">删除公告</button>
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>标题</td>
+					<td>类型</td>
+					<td>内容</td>
+					<td>日期</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="delnotice" class="btn btn-primary">删除公告</button>
+					</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>标题</td>
+					<td>类型</td>
+					<td>内容</td>
+					<td>日期</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="delnotice" class="btn btn-primary">删除公告</button>
+					</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>标题</td>
+					<td>类型</td>
+					<td>内容</td>
+					<td>日期</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="delnotice" class="btn btn-primary">删除公告</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="userCaoZuo">
+			<div class="userCaoZuo-left">
+				<span>当前页：</span><span>1/2</span><span>每页显示10条数据</span>
+			</div>
+			<div class="userCaoZuo-right">
+				<span><img src="systemImg/page_back_1.gif"/></span>
+				<span><img src="systemImg/page_first_1.gif"/></span>
+				<span><img src="systemImg/page_next.gif"/></span>
+				<span><img src="systemImg/page_last.gif"/></span>
+				<span>转到第<input type="text" id="pageText" /></span>
+				<span><img src="systemImg/go.gif"/></span>
+			</div>
+		</div>
+		
+		<!-- Modal添加 -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">添加公告</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul class="regleft">
+							<li>公告标题：</li>
+							<li>公告类型：</li>
+							<li>公告内容：</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="regright">
+							<li><input type="text" id="noticetitle" /></li>
+							<li><input type="text" id="noticetype" /></li>
+							<li><textarea id="noticecontext" rows="10" cols="55" ></textarea></li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary" id="zhuce">添加</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--model添加结束-->
+	
+	<!-- Modal修改 -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">修改公告</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul class="regleft">
+							<li>公告标题：</li>
+							<li>公告类型：</li>
+							<li>公告内容：</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="regright">
+							<li><input type="text" id="noticetitle" /></li>
+							<li><input type="text" id="noticetype" /></li>
+							<li><textarea id="noticecontext" rows="10" cols="55" ></textarea></li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary" id="zhuce">修改</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--model添加结束-->
+	
+	</body>
+</html>

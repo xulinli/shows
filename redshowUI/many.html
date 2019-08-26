@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/daohang.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+
+	<body>
+		<div class="many">
+			<span>TopOne小组集团</span>
+			<span>TopOne充值</span>
+		</div>
+		<div class="many-center">
+			<div class="many_acount">
+				<h6>账号</h6>
+				<p>番茄你个西红柿</p>
+			</div>
+			<div class="chongzhifangshi">
+				<h6>充值方式</h6>
+				<ul>
+					<li><img src="daohangimg/zhifubao.png"/></li>
+					<li><img src="daohangimg/weixin.png"/></li>
+				</ul>
+			</div>
+			<div class="chongzhijine">
+				<h6>充值金额</h6>
+				<ul>
+					<li><span>￥10</span>（1000红袖币）</li>
+					<li><span>￥20</span>（2000红袖币）</li>
+					<li><span>￥30</span>（3000红袖币）</li>
+					<li><span>￥50</span>（5000红袖币）</li>
+					<li><span>￥100</span>（10000红袖币）</li>
+					<li>其他金额￥<input id="inp" type="text" /></li>
+				</ul>
+			</div>
+			<div class="anniu">
+				<span>1、1元人民币=100红袖币</span><br />
+				<span>2、1红袖币=1红袖游戏币</span>
+				<p><button class="btn btn-primary" data-toggle="modal" data-target="#addModal">确认支付<span class="qian"></span></button></p>
+				<p><input type="checkbox" name="" id="" value="" /> 我同意《用户服务协议》</p>
+			</div>
+		</div>
+		<!-- Modal添加 -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+						<h4 class="modal-title" id="myModalLabel">扫码支付</h4>
+					</div>
+					<div class="modal-body">
+						<div class="zhifu">
+							<img src="daohangimg/weixinzhifu.png"/>
+							<img src="daohangimg/zhifubaozhifu.jpg"/>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" id="zhuce">确认已经扫描</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--model添加结束-->
+		<div class="many-foot">
+			<ul>
+				<li>TopOne集团旗下：起点中文网</li>
+				<li> 起点女生网</li>
+				<li>创世中文网</li>
+				<li>云起书院</li>
+				<li>榕树下</li>
+				<li>红袖添香</li>
+				<li>小说阅读网</li>
+				<li>言情小说吧</li>
+			</ul>
+			<ul>
+				<li>潇湘书院</li>
+				<li>天方听书网</li>
+				<li>懒人听书</li>
+				<li>阅文悦读</li>
+				<li>QQ阅读</li>
+				<li>起点读书</li>
+				<li>作家助手</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.chongzhifangshi>ul>li').click(function() {
+				$(this).addClass("xuanzhong").siblings().removeClass("xuanzhong");
+			});
+			$('.chongzhijine>ul>li').click(function() {
+				var qian = $(this).find('span').html();
+				$('.qian').html(qian);
+				$(this).addClass("xuanzhong").siblings().removeClass("xuanzhong");
+			});
+		});
+	</script>
+
+</html>

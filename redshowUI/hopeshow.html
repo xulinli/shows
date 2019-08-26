@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>红袖添香TopOne小组模创</title>
+		<link rel="icon" href="headImg/title.png" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/hopeshow.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="nav">
+				<div class="head">
+					<div class="head-left">
+						<img src="headImg/logo1.png" />
+					</div>
+					<div class="head-center">
+						<input type="text" name="search" id="search" placeholder="农女福妃别太甜" />
+						<img src="headImg/search.png" />
+					</div>
+					<div class="head-right">
+						<ul>
+							<li><img src="headImg/book.png" />
+								<a href="booksjia.html">我的书架</a>
+							</li>
+							<li><img src="headImg/book.png" />
+								<a href="#">我的订单</a>
+							</li>
+							<!--登录弹出框-->
+							<li class="login">
+								<a class="a globalLoginBtn"><img src="headImg/user.png" width="28px" height="28px" id="user_head_img"/></a>
+								<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+									<div style="display:table; width:100%; height:100%;">
+										<div style="vertical-align:middle; display:table-cell;">
+											<div class="modal-dialog modal-sm" style="width:540px;">
+												<div class="modal-content" style="border: none;">
+													<div class="col-left"></div>
+													<div class="col-right">
+														<div class="modal-header">
+															<button type="button" id="login_close" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+															<h4 class="modal-title" id="loginModalLabel" style="font-size: 18px;">登录</h4>
+														</div>
+														<div class="modal-body">
+															<section class="box-login v5-input-txt" id="box-login">
+																<form id="login_form" action="" method="post" autocomplete="off">
+
+																	<ul>
+																		<li class="form-group"><input class="form-control" id="id_account_l" maxlength="50" name="account_l" placeholder="请输入邮箱账号/手机号" type="text"></li>
+																		<li class="form-group"><input class="form-control" id="id_password_l" name="password_l" placeholder="请输入密码" type="password"></li>
+
+																	</ul>
+																</form>
+																<p class="good-tips marginB10">
+																	<a id="btnForgetpsw" class="fr">忘记密码？</a>还没有账号？
+																	<a href="register.html" target="_blank" id="btnRegister">立即注册</a>
+																</p>
+																<div class="login-box marginB10">
+																	<button id="userLogin" type="button" class="btn btn-micv5 btn-block globalLogin">登录</button>
+																	<div id="login-form-tips" class="tips-error bg-danger" style="display: none;">错误提示</div>
+																</div>
+
+																<div class="threeLogin"><span>其他方式登录</span>
+																	<a class="nqq" href="javascript:;"></a>
+																	<a class="nwx" href="javascript:;"></a>
+																	<!--<a class="nwb"></a>-->
+																</div>
+
+															</section>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 用户名显示 -->
+							<li id="usersname_li">
+								<h5 id="usersname"></h5>
+								<ul id="logout" class="text-center">
+									<li><a href="http://127.0.0.1:8020/redshow/myselfMain.html">个人中心</a></li>
+									<li class="logout_1">注销</li>
+									<li class="logout_1">退出</li>
+								</ul>
+							</li>
+							<!--登录框完结-->
+						</ul>
+					</div>
+
+				</div>
+				<div class="head1">
+					<ul>
+						<li id="qbfl1">
+							<a href="#">全部分类</a>
+							<div class="qbfl">
+								<ul>
+									<li>
+										<a href="#">现代言情</a>
+									</li>
+									<li>
+										<a href="#">古代言情</a>
+									</li>
+									<li>
+										<a href="#">浪漫青春</a>
+									</li>
+									<li>
+										<a href="#">玄幻言情</a>
+									</li>
+									<li>
+										<a href="#">仙侠奇缘</a>
+									</li>
+									<li>
+										<a href="#">悬疑</a>
+									</li>
+									<li>
+										<a href="#">科幻空间</a>
+									</li>
+									<li>
+										<a href="#">游戏竞技</a>
+									</li>
+									<li>
+										<a href="#">短篇小说</a>
+									</li>
+									<li>
+										<a href="#">轻小说</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="redshowpaihangbang.html">排行榜</a>
+						</li>
+						<li>
+							<a href="#">免费</a>
+						</li>
+						<li>
+							<a href="#">完本</a>
+						</li>
+						<li>
+							<a href="#">古言</a>
+						</li>
+						<li>
+							<a href="#">现言</a>
+						</li>
+						<li>
+							<a href="#">玄幻仙侠</a>
+						</li>
+						<li>
+							<a href="#">悬疑科幻</a>
+						</li>
+						<li>
+							<a href="#">青春游戏</a>
+						</li>
+						<li>
+							<a href="#">风尚阁</a>
+						</li>
+						<li>
+							<a href="#">轻小说</a>
+						</li>
+						<li>
+							<a href="many.html" target="_blank">充值</a>
+						</li>
+						<li>
+							<a href="#">作家专区</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="left-bj">
+				<img src="headImg/left-bj.png" />
+			</div>
+			<div class="center1">
+				<div class="center-bj">
+					<div class="active1">
+						<img src="headImg/lunbo1.jpg" />
+					</div>
+					<div class="active2">
+						<img src="headImg/lunbo2.jpg" />
+					</div>
+					<div class="active2">
+						<img src="headImg/lunbo3.jpg" />
+					</div>
+					<div class="active2">
+						<img src="headImg/lunbo4.jpg" />
+					</div>
+					<div class="active2">
+						<img src="headImg/lunbo5.jpg" />
+					</div>
+				</div>
+				<div class="center-lb">
+					<ul class="hover1">
+						<li>网络文学优秀作品联展</li>
+						<li>清穿皇妃要娇养</li>
+						<li>重生娇妻已上线</li>
+						<li>我的黑月光女友</li>
+						<li>我喜欢的你都有</li>
+					</ul>
+				</div>
+				<div class="center-gg">
+					<ul>
+						<li class="gg1">公告<span><img src="headImg/gg1.png" /></span></li>
+						<li>[活动]华语言情征文大赛</li>
+						<li>[公告]星学院长沙站作家班</li>
+						<li>[公告]中国网文发展报告调研</li>
+						<li>[公告]2018优秀作品推介</li>
+						<li>[公告]2019网文全明星</li>
+						<li>[公告]红袖作家福利</li>
+					</ul>
+				</div>
+			</div>
+			<div class="right-bj">
+				<img src="headImg/right-bj.png" />
+			</div>
+			<div class="bianjiqiangtui">
+				<div class="bjqt-left">
+					<ul>
+						<li class="bj1">编辑强推<span><img src="headImg/bjimg.png" /></span></li>
+					</ul>
+					<ul class="bj2">
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (9).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (11).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (10).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="bj2">
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (1).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (2).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (3).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="bj2">
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (4).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (5).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="img1">
+								<img src="headImg/90 (6).jpg" />
+							</div>
+							<div class="ms1">
+								<ul>
+									<li>猫系女友</li>
+									<li>人前，她高冷无双、镇定非常，“郑先生，话不多说，</li>
+									<li>作者：美人妆 现代言情</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bjqt-right">
+					<ul>
+						<li class="fsg1">风尚阁<span><img src="headImg/fsg.png" /></span></li>
+					</ul>
+					<ul>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+						<li class="fsg2">
+							<a href="#" class="fsg2-left">「现代言情」</a>
+							<a href="#" class="fsg2-right">冉冉心动</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="yipin">
+				<div class="yipin-left"></div>
+				<div class="yinpin-right">
+					<ul>
+						<li><img src="headImg/90 (1).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (2).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (3).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (4).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (5).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (6).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (7).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (8).jpg" /><br />农女福妃别太甜</li>
+						<li><img src="headImg/90 (9).jpg" /></li>
+						<li><img src="headImg/90 (10).jpg" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="xdyq">
+				<img src="headImg/center1.jpg" />
+			</div>
+			<div class="bangdan">
+				<div class="fengyun">
+					<ul class="fengyun-top">
+						<li>华语言情风云榜<span class="gengduo">  更多>>  </span></li>
+					</ul>
+					<ul class="fengyun-center">
+						<li>
+							<ul class="fengyun-context">
+								<li><span>NO 1</span></li>
+								<li>农女福妃别太甜</li>
+								<li>1485月票</li>
+								<li>古代言情·橙子澄澄</li>
+							</ul>
+							<ul class="fengyun-img">
+								<li><img src="headImg/90 (2).jpg" /></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="fengyun-foot">
+						<li>
+							<span class="fengyun-num">2</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">3</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">4</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">5</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">6</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">7</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">8</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">9</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">10</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+					</ul>
+				</div>
+				<div class="rexiao">
+					<ul class="rexiao-top">
+						<li>热销榜<span class="gengduo">  更多>>  </span</li>
+					</ul>
+					<ul class="rexiao-center">
+						<ul class="fengyun-context">
+							<li><span>NO 1</span></li>
+						<li>农女福妃别太甜</li>
+						<li>1485月票</li>
+						<li>古代言情·橙子澄澄</li>
+					</ul>
+					<ul class="fengyun-img">
+						<li><img src="headImg/90 (3).jpg" /></li>
+					</ul>
+					</ul>
+					<ul class="rexiao-foot">
+						<li>
+							<span class="fengyun-num">2</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">3</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">4</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">5</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">6</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">7</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">8</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">9</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">10</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+					</ul>
+				</div>
+				<div class="liwu">
+					<ul class="liwu-top">
+						<li>礼物榜<span class="gengduo">  更多>>  </span</li>
+					</ul>
+					<ul class="liwu-center">
+						<ul class="fengyun-context">
+							<li><span>NO 1</span></li>
+						<li>农女福妃别太甜</li>
+						<li>1485月票</li>
+						<li>古代言情·橙子澄澄</li>
+					</ul>
+					<ul class="fengyun-img">
+						<li><img src="headImg/90 (4).jpg" /></li>
+					</ul>
+					</ul>
+					<ul class="liwu-foot">
+						<li>
+							<span class="fengyun-num">2</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">3</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">4</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">5</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">6</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">7</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">8</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">9</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">10</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+					</ul>
+				</div>
+				<div class="gengxin">
+					<ul class="gengxin-top">
+						<li>更新榜<span class="gengduo">  更多>>  </span</li>
+					</ul>
+					<ul class="gengxin-center">
+						<ul class="fengyun-context">
+							<li><span>NO 1</span></li>
+						<li>农女福妃别太甜</li>
+						<li>1485月票</li>
+						<li>古代言情·橙子澄澄</li>
+					</ul>
+					<ul class="fengyun-img">
+						<li><img src="headImg/90 (5).jpg" /></li>
+					</ul>
+					</ul>
+					<ul class="gengxin-foot">
+						<li>
+							<span class="fengyun-num">2</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">3</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">4</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">5</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">6</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">7</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">8</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">9</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+						<li>
+							<span class="fengyun-num">10</span>
+							<span class="fengyun-numcon">惊世医妃</span>
+							<span class="fengyun-numcount">4600</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="yihun">
+				<img src="headImg/yihun.jpg" />
+			</div>
+
+			<div class="footer">
+				<div class="footer1">
+					<div class="friend-link"><em><a class="yuewen" href="//www.yuewen.com" target="_blank">阅文集团</a><cite>旗下网站：</cite></em>
+						<a href="//www.qidian.com" target="_blank">起点中文网</a>
+						<a href="//www.qdmm.com" target="_blank">起点女生网</a>
+						<a href="http://chuangshi.qq.com" target="_blank">创世中文网</a>
+						<a href="http://yunqi.qq.com" target="_blank">云起书院</a>
+						<a href="http://www.rongshuxia.com" target="_blank">榕树下</a>
+						<a href="//www.hongxiu.com">红袖添香</a>
+						<a href="//www.readnovel.com" target="_blank">小说阅读网</a>
+						<a href="//www.xs8.cn" target="_blank">言情小说吧</a>
+						<a href="http://www.xxsy.net" target="_blank">潇湘书院</a>
+						<a href="http://www.tingbook.com" target="_blank">天方听书网</a>
+						<a href="http://www.lrts.me" target="_blank">懒人听书</a>
+						<a href="http://yuedu.yuewen.com" target="_blank">阅文悦读</a>
+						<a href="//www.yuewen.com/app.html#appqq" target="_blank">QQ阅读</a>
+						<a href="//www.yuewen.com/app.html#appqd" target="_blank">起点读书</a>
+						<a href="//www.yuewen.com/app.html#appzj" target="_blank">作家助手</a>
+						<a href="//www.webnovel.com" target="_blank" title="起点中文网国际版">Qidian International</a>
+					</div>
+					<div class="footer-menu dib-wrap">
+						<a href="//www.yuewen.com" target="_blank">关于我们</a>
+						<a href="//www.yuewen.com/#&contact" target="_blank">联系我们</a>
+						<a href="/help?id=11158" target="_blank">帮助中心</a>
+						<a href="//www.yuewen.com/service.html" target="_blank">客服中心</a>
+						<a href="//join.yuewen.com" target="_blank">加入我们</a>
+						<a href="//write.qq.com/public/login.html?siteid=6" target="_blank">作家专区</a>
+						<a href="http://comic.hongxiu.com" target="_blank">动漫频道</a>
+						<a href="http://game.hongxiu.com" target="_blank">游戏专区</a>
+						<a href="//jubao.yuewen.com" target="_blank">举报中心</a>
+					</div>
+					<div class="copy-right">
+						<p><span>Copyright &copy; 1999-2019 www.hongxiu.com All Rights Reserved</span>版权所有 北京红袖添香科技发展有限公司</p>
+						<p>北京红袖添香科技发展有限公司 京ICP证090200号
+							<a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank">网站备案/许可证号：京ICP备09093681号-1</a>京网文[2015]0006-006号新出网证（京）字204号</p>
+						<p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！客服电话：010-59357051</p>
+						<p>联系方式 总机 010-62111358 地址：北京市朝阳区天辰东路7号楼-2至8层101内北区7层706室</p>
+						<p>本站所收录作品、社区话题、书库评论及本站所做之广告均属个人行为，与本站立场无关</p>
+					</div>
+					<div class="safety-box">
+						<div class="safety-img dib-wrap">
+							<a class="site1" href="http://www.12377.cn" target="_blank"></a>
+							<a class="site2" href="http://www.shjbzx.cn" target="_blank"></a>
+							<a class="site3" href="https://ss.knet.cn/verifyseal.dll?sn=e17103011010869321wsdl000000&a=1&pa=0.8369620393163408" target="_blank"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/hopeshow.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/userLogin.js" ></script>
+</html>

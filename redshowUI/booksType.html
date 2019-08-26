@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="title">书籍类型展示</div>
+		<div class="userSearc">
+			<div class="search-right">
+				<button id="adduser" class="btn btn-primary" data-toggle="modal" data-target="#addModal">添加书籍类型</button>
+			</div>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>书籍类型</th>
+					<th>书籍类型描述</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>书籍类型</td>
+					<td>书籍类型描述</td>
+					<td>
+						<button id="edituser" class="btn btn-primary" data-toggle="modal" data-target="#editModal">修改书籍类型</button>
+						<button id="deluser" class="btn btn-primary">删除书籍类型</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>书籍类型</td>
+					<td>书籍类型描述</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="deluser" class="btn btn-primary">删除书籍类型</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>书籍类型</td>
+					<td>书籍类型描述</td>
+					<td>
+						<a href="#" class="editUser">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="deluser" class="btn btn-primary">删除书籍类型</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>书籍类型</td>
+					<td>书籍类型描述</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="deluser" class="btn btn-primary">删除书籍类型</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>书籍类型</td>
+					<td>书籍类型描述</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="deluser" class="btn btn-primary">删除书籍类型</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>书籍类型</td>
+					<td>书籍类型描述</td>
+					<td>
+						<a href="#">修改</a>&nbsp;&nbsp;&nbsp;
+						<button id="deluser" class="btn btn-primary">删除书籍类型</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="userCaoZuo">
+			<div class="userCaoZuo-left">
+				<span>当前页：</span><span>1/2</span><span>每页显示10条数据</span>
+			</div>
+			<div class="userCaoZuo-right">
+				<span><img src="systemImg/page_back_1.gif"/></span>
+				<span><img src="systemImg/page_first_1.gif"/></span>
+				<span><img src="systemImg/page_next.gif"/></span>
+				<span><img src="systemImg/page_last.gif"/></span>
+				<span>转到第<input type="text" id="pageText" /></span>
+				<span><img src="systemImg/go.gif"/></span>
+			</div>
+		</div>
+		
+		<!-- Modal添加 -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">添加书籍类型</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul class="regleft">
+							<li>书籍类型：</li>
+							<li>书籍类型描述：</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="regright">
+							<li><input type="text" id="bookstype" /></li>
+							<li><input type="text" id="bookstyperemark" /></li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary" id="zhuce">添加</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--model添加结束-->
+	
+	<!-- Modal修改 -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">修改书籍类型</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul class="regleft">
+							<li>书籍类型：</li>
+							<li>书籍类型描述：</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="regright">
+							<li><input type="text" id="bookstype" /></li>
+							<li><input type="text" id="bookstyperemark" /></li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary" id="zhuce">修改</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--model添加结束-->
+	
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/system.css" />
+	</head>
+
+	<body>
+		<div class="nav">
+			<div class="top">
+				<div class="top1">
+					<div class="top1-left"></div>
+					<div class="top1-right"></div>
+				</div>
+				<div class="top2">
+					<div class="top2-left"></div>
+					<div class="top2-center1">
+						<span>
+							<img src="systemImg/home.gif"/>
+							<a href="hopeshow.html">回到首页</a>
+						</span>
+						<span>
+							<img src="systemImg/quit.gif"/>
+							<a href="#" id="logout">退出系统</a>
+						</span>
+					</div>
+					<div class="top2-center2"></div>
+					<div class="top2-right">
+						<span><img src="systemImg/uesr.gif"/>当前登录用户：<span id="usersname"></span></span>
+						<span>角色：<span id="usersrole"></span></span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-center">
+			<div class="main-left">
+				<div class="left-menu">
+					<div class="menu1"><span onclick="expand(1)">信息管理</span></div>
+						<div id="child1" class="childrenMenu">
+							<ul>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="user">用户管理</span>
+								</li>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="role">角色管理</span>
+								</li>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="menu">菜单管理</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu1"><span onclick="expand(2)">订单系统</span></div>
+						<div id="child2" class="childrenMenu">
+							<ul>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span>用户信息管理</span>
+								</li>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span>会员订单管理</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu1"><span onclick="expand(3)">留言系统</span></div>
+						<div id="child3" class="childrenMenu">
+							<ul>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span>读取用户留言</span>
+								</li>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span>读取买家留言</span>
+								</li>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span>读取申请</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu1"><span onclick="expand(4)">日志系统</span></div>
+						<div id="child4" class="childrenMenu">
+							<ul>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="log">日志管理</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu1"><span onclick="expand(5)">书籍系统</span></div>
+						<div id="child5" class="childrenMenu">
+							<ul>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="books">书籍管理</span>
+								</li>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="booksType">书籍类型管理</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu1"><span onclick="expand(6)">公告系统</span></div>
+						<div id="child6" class="childrenMenu">
+							<ul>
+								<li>
+									<span><img src="systemImg/menu_icon.gif"/></span>
+									<span id="notice">公告管理</span>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="main-right">
+				欢迎进入红袖添香后台页面
+			</div>
+		</div>
+		<div class="down">
+			<div class="down-left"></div>
+			<div class="down-center">
+				<span class="down-context">
+					Copyright © 1999-2019 www.hongxiu.com All Rights Reserved版权所有 北京红袖添香科技发展有限公司
+				</span>
+				<span id="dateTime"></span>
+			</div>
+			<div class="down-right"></div>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sytem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/hopeshow.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		function expand(el) {
+			childObj = document.getElementById("child" + el);
+			if(childObj.style.display == 'none') {
+				childObj.style.display = 'block';
+			} else {
+				childObj.style.display = 'none';
+			}
+			return;
+		}
+		
+		function change() {
+			var demo = document.getElementById("dateTime");
+			var date = new Date();
+			var nowYear = date.getFullYear();
+			var nowMonth = date.getMonth() + 1;
+			var nowDay = date.getDate();
+			var nowHourse = (date.getHours() < 10) ? ("0" + date.getHours()) : date.getHours();
+			var nowMinuts = (date.getMinutes() < 10) ? ("0" + date.getMinutes()) : date.getMinutes();
+			var nowSeconds = (date.getSeconds() < 10) ? ("0" + date.getSeconds()) : date.getSeconds();
+			var now = nowYear + "年" + nowMonth + "月" + nowDay + "日" + nowHourse + "时" +
+				nowMinuts + "分" + nowSeconds + "秒";
+			demo.innerHTML = now;
+		}
+		setInterval(change, 1000);
+	</script>
+
+</html>

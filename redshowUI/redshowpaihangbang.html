@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>红袖添香排行榜</title>
+		<link rel="icon" href="headImg/title.png" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/hopeshow.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/daohang.css" />
+	</head>
+
+	<body>
+		<div class="nav">
+				<div class="head">
+					<div class="head-left">
+						<a href="hopeshow.html"><img src="headImg/logo.png" /></a>
+					</div>
+					<div class="head-center">
+						<input type="text" name="search" id="search" placeholder="农女福妃别太甜" />
+						<img src="headImg/search.png" />
+					</div>
+					<div class="head-right">
+						<ul>
+							<li><img src="headImg/book.png" />
+								<a href="booksjia.html">我的书架</a>
+							</li>
+							<li><img src="headImg/book.png" />
+								<a href="#">我的订单</a>
+							</li>
+							<!--登录弹出框-->
+							<li class="login">
+								<a href="myselfMain.html" class="a globalLoginBtn"><img src="headImg/user.png" /></a>
+								<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+									<div style="display:table; width:100%; height:100%;">
+										<div style="vertical-align:middle; display:table-cell;">
+											<div class="modal-dialog modal-sm" style="width:540px;">
+												<div class="modal-content" style="border: none;">
+													<div class="col-left"></div>
+													<div class="col-right">
+														<div class="modal-header">
+															<button type="button" id="login_close" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+															<h4 class="modal-title" id="loginModalLabel" style="font-size: 18px;">登录</h4>
+														</div>
+														<div class="modal-body">
+															<section class="box-login v5-input-txt" id="box-login">
+																<form id="login_form" action="" method="post" autocomplete="off">
+
+																	<ul>
+																		<li class="form-group"><input class="form-control" id="username" maxlength="50" name="account_l" placeholder="请输入邮箱账号/手机号" type="text"></li>
+																		<li class="form-group"><input class="form-control" id="pwd" name="password_l" placeholder="请输入密码" type="password"></li>
+
+																	</ul>
+																</form>
+																<p class="good-tips marginB10">
+																	<a id="btnForgetpsw" class="fr">忘记密码？</a>还没有账号？
+																	<a href="http://localhost:8080/RedShowBooks/area" target="_blank" id="btnRegister">立即注册</a>
+																</p>
+																<div class="login-box marginB10">
+																	<button id="denglu" type="button" class="btn btn-micv5 btn-block globalLogin">登录</button>
+																	<div id="login-form-tips" class="tips-error bg-danger" style="display: none;">错误提示</div>
+																</div>
+
+																<div class="threeLogin"><span>其他方式登录</span>
+																	<a class="nqq" href="javascript:;"></a>
+																	<a class="nwx" href="javascript:;"></a>
+																	<!--<a class="nwb"></a>-->
+																</div>
+
+															</section>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!--登录框完结-->
+						</ul>
+					</div>
+
+				</div>
+				<div class="head1">
+					<ul>
+						<li id="qbfl1">
+							<a href="#">全部分类</a>
+							<div class="qbfl">
+								<ul>
+									<li>
+										<a href="#">现代言情</a>
+									</li>
+									<li>
+										<a href="#">古代言情</a>
+									</li>
+									<li>
+										<a href="#">浪漫青春</a>
+									</li>
+									<li>
+										<a href="#">玄幻言情</a>
+									</li>
+									<li>
+										<a href="#">仙侠奇缘</a>
+									</li>
+									<li>
+										<a href="#">悬疑</a>
+									</li>
+									<li>
+										<a href="#">科幻空间</a>
+									</li>
+									<li>
+										<a href="#">游戏竞技</a>
+									</li>
+									<li>
+										<a href="#">短篇小说</a>
+									</li>
+									<li>
+										<a href="#">轻小说</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="redshowpaihangbang.html">排行榜</a>
+						</li>
+						<li id="mianfei">
+							<a href="#">免费</a>
+						</li>
+						<li id="wanben">
+							<a href="#">完本</a>
+						</li>
+						<li id="guyan">
+							<a href="#">古言</a>
+						</li>
+						<li id="xianyan">
+							<a href="#">现言</a>
+						</li>
+						<li id="xuanhuan">
+							<a href="#">玄幻仙侠</a>
+						</li>
+						<li id="kehuan">
+							<a href="#">悬疑科幻</a>
+						</li>
+						<li id="qingchun">
+							<a href="#">青春游戏</a>
+						</li>
+						<li id="fengshang">
+							<a href="#">风尚阁</a>
+						</li>
+						<li id="xiaoshuo">
+							<a href="#">轻小说</a>
+						</li>
+						<li id="chongzhi">
+							<a href="many.html" target="_blank">充值</a>
+						</li>
+						<li id="zuojia">
+							<a href="#">作家专区</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		<div class="paihang">
+			<div class="paihang1">
+				<ul>
+					<li><span><img src="daohangimg/jiangbei.png"/></span><span>全部榜单</span></li>
+					<li><span><img src="daohangimg/rexiao.png"/></span><span>热销榜</span></li>
+					<li><span><img src="daohangimg/hongxiu.png"/></span><span>红袖风云榜</span></li>
+					<li><span><img src="daohangimg/yuewen.png"/></span><span>阅文风云榜</span></li>
+					<li><span><img src="daohangimg/xinshu.png"/></span><span>新书榜</span></li>
+					<li><span><img src="daohangimg/tuijian.png"/></span><span>周推荐榜</span></li>
+					<li><span><img src="daohangimg/wanben.png"/></span><span>完本榜</span></li>
+					<li><span><img src="daohangimg/gengxin.png"/></span><span>更新榜</span></li>
+					<li><span><img src="daohangimg/liwu.png"/></span><span>礼物榜</span></li>
+					<li><span><img src="daohangimg/dianji.png"/></span><span>点击榜</span></li>
+					<li><span><img src="daohangimg/shoucang.png"/></span><span>收藏榜</span></li>
+					<li><span><img src="daohangimg/qianyue.png"/></span><span>签约作者新书榜</span></li>
+					<li><span><img src="daohangimg/rexiao.png"/></span><span>公众作品人气榜</span></li>
+				</ul>
+			</div>
+			<div class="paihang-right">
+				<div class="paihang2">
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">热销榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">红袖风云榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">新书榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+				</div>
+				<div class="paihang3">
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">周推荐榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">完本榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">更新榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+				</div>
+				<div class="paihang4">
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">打赏榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">点击榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+					<div class="paihang-right1">
+						<ul class="paihang-tou">
+							<li class="paihang-tou">收藏榜</li>
+						</ul>
+						<ul class="paihang-context">
+							<li>1、好想住你隔壁</li>
+							<li>2、别闹，薄先生！</li>
+							<li>3、亲爱的特助小姐</li>
+							<li>4、许你万丈光芒好</li>
+							<li>5、惊世医妃</li>
+							<li>6、暖风不及你情深</li>
+							<li>7、农女福妃别太甜</li>
+							<li>8、电竞大神暗恋我</li>
+							<li>9、影后今天还没承认恋情</li>
+							<li>10、今天先败一个亿</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer1">
+				<div class="friend-link"><em><a class="yuewen" href="//www.yuewen.com" target="_blank">阅文集团</a><cite>旗下网站：</cite></em>
+					<a href="//www.qidian.com" target="_blank">起点中文网</a>
+					<a href="//www.qdmm.com" target="_blank">起点女生网</a>
+					<a href="http://chuangshi.qq.com" target="_blank">创世中文网</a>
+					<a href="http://yunqi.qq.com" target="_blank">云起书院</a>
+					<a href="http://www.rongshuxia.com" target="_blank">榕树下</a>
+					<a href="//www.hongxiu.com">红袖添香</a>
+					<a href="//www.readnovel.com" target="_blank">小说阅读网</a>
+					<a href="//www.xs8.cn" target="_blank">言情小说吧</a>
+					<a href="http://www.xxsy.net" target="_blank">潇湘书院</a>
+					<a href="http://www.tingbook.com" target="_blank">天方听书网</a>
+					<a href="http://www.lrts.me" target="_blank">懒人听书</a>
+					<a href="http://yuedu.yuewen.com" target="_blank">阅文悦读</a>
+					<a href="//www.yuewen.com/app.html#appqq" target="_blank">QQ阅读</a>
+					<a href="//www.yuewen.com/app.html#appqd" target="_blank">起点读书</a>
+					<a href="//www.yuewen.com/app.html#appzj" target="_blank">作家助手</a>
+					<a href="//www.webnovel.com" target="_blank" title="起点中文网国际版">Qidian International</a>
+				</div>
+				<div class="footer-menu dib-wrap">
+					<a href="//www.yuewen.com" target="_blank">关于我们</a>
+					<a href="//www.yuewen.com/#&contact" target="_blank">联系我们</a>
+					<a href="/help?id=11158" target="_blank">帮助中心</a>
+					<a href="//www.yuewen.com/service.html" target="_blank">客服中心</a>
+					<a href="//join.yuewen.com" target="_blank">加入我们</a>
+					<a href="//write.qq.com/public/login.html?siteid=6" target="_blank">作家专区</a>
+					<a href="http://comic.hongxiu.com" target="_blank">动漫频道</a>
+					<a href="http://game.hongxiu.com" target="_blank">游戏专区</a>
+					<a href="//jubao.yuewen.com" target="_blank">举报中心</a>
+				</div>
+				<div class="copy-right">
+					<p><span>Copyright &copy; 1999-2019 www.hongxiu.com All Rights Reserved</span>版权所有 北京红袖添香科技发展有限公司</p>
+					<p>北京红袖添香科技发展有限公司 京ICP证090200号
+						<a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank">网站备案/许可证号：京ICP备09093681号-1</a>京网文[2015]0006-006号新出网证（京）字204号</p>
+					<p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！客服电话：010-59357051</p>
+					<p>联系方式 总机 010-62111358 地址：北京市朝阳区天辰东路7号楼-2至8层101内北区7层706室</p>
+					<p>本站所收录作品、社区话题、书库评论及本站所做之广告均属个人行为，与本站立场无关</p>
+				</div>
+				<div class="safety-box">
+					<div class="safety-img dib-wrap">
+						<a class="site1" href="http://www.12377.cn" target="_blank"></a>
+						<a class="site2" href="http://www.shjbzx.cn" target="_blank"></a>
+						<a class="site3" href="https://ss.knet.cn/verifyseal.dll?sn=e17103011010869321wsdl000000&a=1&pa=0.8369620393163408" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/hopeshow.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,261 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*头部样式*/
+.nav{
+	width: 100%;
+	height: 60px;
+}
+.top{
+	width: 100%;
+	height: 60px;
+}
+.top1-left{
+	width: 100px;
+	float: left;
+	background-image: url(../systemImg/main_01.gif);
+	background-repeat: no-repeat;
+	height: 10px;
+}
+.top1-right{
+	float: left;
+	width: calc(100% - 100px);
+	background-image: url(../systemImg/main_03.gif);
+	height: 10px;
+}
+
+.top2-left{
+	float: left;
+	width: 280px;
+	height: 50px;
+	background-image: url(../systemImg/log.png);
+	
+}
+.top2-center1{
+	float: left;
+	width: calc(100% - 820px );
+	height: 50px;
+	background-image: url(../systemImg/main_07.gif);
+}
+.top2-center1>span{
+	margin-left: 20px;
+	line-height: 50px;
+}
+.top2-center1 a{
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+}
+.top2-center1 a:hover{
+	color: blue;
+	text-decoration: none;
+}
+.top2-center2{
+	float: left;
+	width: 240px;
+	height: 50px;
+	background-image: url(../systemImg/main_08.gif);
+}
+
+.top2-right{
+	float: right;
+	width: 300px;
+	height: 50px;
+	background-image: url(../systemImg/main_09.gif);
+}
+
+.top2-right>span{
+	line-height: 50px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin-left: 10px;
+}
+/*头部样式结束*/
+
+/*中间样式*/
+.cneter{
+	width: 100%;
+	height: 670px;
+}
+.center-left{
+	float: left;
+	width: 180px;
+	height: 670px;
+}
+.center-cent{
+	float: left;
+	width: 10px;
+	height: 670px;
+	line-height: 670px;
+	background-image: url(../systemImg/main_12.gif);
+}
+.center-cent>img:hover{
+	cursor: pointer;
+}
+.center-right{
+	width: calc(100% - 10px);
+	height: 670px;
+}
+
+/*头部的中间样式结束*/
+
+/*左边样式*/
+.main-left{
+	float: left;
+	width: 150px;
+	height: 100%;
+}
+.left-menu{
+	width: 150px;
+	height:100%;
+}
+.menu1{
+	cursor: pointer;
+	width: 150px;
+	height: 30px;
+	background-image: url(../systemImg/menu_bt.jpg);
+}
+.menu1:hover{
+	color: red;
+}
+.menu1>span{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin-left: 30px;
+}
+.childrenMenu>ul>li{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	width: 150px;
+	height: 30px;
+}
+.childrenMenu>ul>li:hover{
+	color: red;
+}
+.childrenMenu{
+	display: none;
+	cursor: pointer;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	width: 150px;
+}
+.childrenMenu span{
+	margin-left: 15px;
+}
+/*左边样式结束*/
+
+
+/*系统中间右边样式*/
+.main-right{
+	width: calc(100% - 180px);
+	height: 100%;
+	float: left;
+}
+
+/*用户界面样式*/
+.search-left{
+	float: left;
+}
+.search-left>span{
+	margin-left: 20px;
+}
+
+.search-right{
+	float: right;
+	margin-right: 100px;
+}
+.userCaoZuo{
+	width: 100%;
+	height: 30px;
+}
+.userCaoZuo-left{
+	float: left;
+	width: 300px;
+	height: 30px;
+}
+.userCaoZuo-left>span{
+	margin-left: 20px;
+}
+.userCaoZuo-right{
+	float: right;
+	width: 500px;
+	height: 30px;
+}
+#pageText{
+	width: 25px;
+}
+.userCaoZuo-right>span{
+	margin-left: 20px;
+}
+
+/*中间样式结束*/
+
+/*底部样式*/
+
+.down{
+	position:fixed;
+	bottom:0;
+	width: 100%;
+	height: 25px;
+}
+.down-left{
+	float: left;
+	width: 180px;
+	height: 20px;
+	background-image: url(../systemImg/main_24.gif);
+}
+.down-center{
+	float: left;
+	width: calc(100% - 200px);
+	height: 20px;
+	background-image: url(../systemImg/main_25.gif);
+}
+#dateTime{
+	float: right;
+	font-family: "楷体";
+	font-size: 14px;
+	color: black;
+}
+.down-context{
+	margin-left: 100px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: black;
+}
+.down-right{
+	float: right;
+	width: 20px;
+	height: 20px;
+	background-image: url(../systemImg/main_27.gif);
+}
+/*底部样式结束*/
+
+/*注册页面*/
+.regleft{
+	list-style: none;
+	float: left;
+}
+.regright{
+	list-style: none;
+}
+.regleft li{
+	margin-top: 35px;
+}
+.regright li{
+	margin-top: 30px;
+}
+/*注册页面结束*/
+
+.title{
+	background-color: #31B0D5;
+	color: #06527D;
+	font-weight: 900;
+	font-size: 20px;
+	text-align: center;
+}
+/*新增*/
+#allpage{
+	margin-left: 0;
+}
