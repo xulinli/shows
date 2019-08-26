@@ -1,0 +1,53 @@
+
+h1{
+	color: #5ECFBB;
+	text-align: center;
+	background-image: url(../headImg/logo1.png);
+	background-repeat: no-repeat;
+	height: 80px;
+	border-bottom: 1px solid #1FD06B;
+}
+
+
+.register {
+	width: 500px;
+	height: 400px;
+	margin-top: 50px;
+	margin-left: 420px;
+	background-color: #5CB85C;
+	border-radius: 50px;
+}
+
+.register>div {
+	float: left;
+}
+
+.regleft>li {
+	color: #2E6DA4;
+	font-size: 18px;
+	list-style: none;
+	width: 100px;
+	height: 30px;
+	margin-top: 15px;
+}
+
+.regright>li {
+	list-style: none;
+	width: 300px;
+	height: 30px;
+	margin-top: 15px;
+}
+.btn{
+	margin-left: 160px;
+}
+
+.footer-wrap{
+	margin-top: 30px;
+	width: 100%;
+	height: 300px;
+	border-top: 1px solid #204D74;
+}
+.footer{
+	margin-top: 50px;
+	text-align: center;
+}
