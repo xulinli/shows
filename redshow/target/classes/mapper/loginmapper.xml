@@ -4,7 +4,7 @@
 <mapper namespace="com.redshow.mapper.LoginMapper">
 	
 	<select id="getUserParameter" parameterType="java.lang.String" resultType="com.redshow.dto.Users">
-		select id,username,password,salt,sex,age,email,phone,address,state,integral from user where username=#{name}
+		select id,username,password,salt,sex,age,email,phone,address,state,integral,haedurl from user where username=#{name}
 	</select>
 	
 	<select id="roleName" parameterType="java.lang.Integer" resultType="java.lang.Integer">

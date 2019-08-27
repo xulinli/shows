@@ -31,7 +31,7 @@
 						</li>
 						<!--登录弹出框-->
 						<li class="login">
-							<a href="myselfMain.html" class="a globalLoginBtn"><img src="headImg/loginsuccess.png" /></a>
+							<a href="myselfMain.html" class="a globalLoginBtn"><img src="headImg/loginsuccess.png" id="heahimg0"/></a>
 						</li>
 						<!--登录框完结-->
 					</ul>
@@ -119,9 +119,9 @@
 		<div class="myMain">
 			<div class="myMain-left">
 				<div class="myMain-left1">
-					<img src="headImg/mymain.png" />
+					<img src="headImg/mymain.png" id="headImg"/>
 					<ul>
-						<li class="huiyuan">会员用户</li>
+						<li class="huiyuan" id="vipname">会员用户</li>
 						<li class="huiyuan">ID:12344567900</li>
 					</ul>
 				</div>
@@ -137,50 +137,51 @@
 						<ul>
 							<li class="shujia">我的书架（6）</li>
 						</ul>
-						<ul class="myBooks-first1">
+						<ul class="myBooks-first1" id="booksBody">
 							<li>
-								<img src="headImg/90 (1).jpg"/><br />
+								<img src="headImg/90 (1).jpg" /><br />
 								<span>书名：风诀九鼎</span><br />
 								<span>作者：三少</span><br />
 								<span>币值：1000红袖币</span>
-								<input type="checkbox" class="check"  />选中
+								<input type="checkbox" class="check" />选中 
+								<span style="color: pink;">已购买</span>
 							</li>
 							<li>
-								<img src="headImg/90 (2).jpg"/><br />
+								<img src="headImg/90 (2).jpg" /><br />
 								<span>书名：风诀九鼎</span><br />
 								<span>作者：三少</span><br />
 								<span>币值：1000红袖币</span>
-								<input type="checkbox" class="check"  />选中
+								<input type="checkbox" class="check" />选中
 							</li>
 							<li>
-								<img src="headImg/90 (3).jpg"/><br />
+								<img src="headImg/90 (3).jpg" /><br />
 								<span>书名：风诀九鼎</span><br />
 								<span>作者：三少</span><br />
 								<span>币值：1000红袖币</span>
-								<input type="checkbox" class="check"  />选中
+								<input type="checkbox" class="check" />选中
 							</li>
-						</ul>
-						<ul class="myBooks-first1">
+						<!--</ul>
+						<ul class="myBooks-first1">-->
 							<li>
-								<img src="headImg/90 (4).jpg"/><br />
+								<img src="headImg/90 (4).jpg" /><br />
 								<span>书名：风诀九鼎</span><br />
 								<span>作者：三少</span><br />
 								<span>币值：1000红袖币</span>
-								<input type="checkbox" class="check"  />选中
-							</li>
-							<li>
-								<img src="headImg/90 (5).jpg"/><br />
-								<span>书名：风诀九鼎</span><br />
-								<span>作者：三少</span><br />
-								<span>币值：1000红袖币</span>
-								<input type="checkbox" class="check"  />选中
+								<input type="checkbox" class="check" />选中
 							</li>
 							<li>
-								<img src="headImg/90 (6).jpg"/><br />
+								<img src="headImg/90 (5).jpg" /><br />
 								<span>书名：风诀九鼎</span><br />
 								<span>作者：三少</span><br />
 								<span>币值：1000红袖币</span>
-								<input type="checkbox" class="check"  />选中
+								<input type="checkbox" class="check" />选中
+							</li>
+							<li>
+								<img src="headImg/90 (6).jpg" /><br />
+								<span>书名：风诀九鼎</span><br />
+								<span>作者：三少</span><br />
+								<span>币值：1000红袖币</span>
+								<input type="checkbox" class="check" />选中
 							</li>
 						</ul>
 					</div>
@@ -197,19 +198,61 @@
 		</div>
 
 	</body>
-<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-	$(function(){
-		$('#myBooksjia').click(function(){
-			window.location.href="booksjia.html";
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#myBooksjia').click(function() {
+				window.location.href = "booksjia.html";
+			});
+
+			$('#quanxuan').click(function() {
+				$('.check').prop("checked", true);
+			});
+			$('#qingkong').click(function() {
+				$('.check').prop("checked", false);
+			});
+			islogin();
+			//判断是否登陆，如果已经登陆那么就将对应信息刷新，否则退回到主页
+			function islogin() {
+				$.ajax({
+					url: 'islogin.do',
+					type: 'post', //HTTP请求类型
+					success: function(resps) {
+						let data = eval("(" + resps + ")");
+						if(data != -1) {
+							if(data.haedurl != null) {
+								var url = "headImg/" + data.haedurl;
+								$("#headImg").attr('src', url);
+								$("#heahimg0").attr('src', url);
+							}
+							$("#vipname").html(data.username);
+						} else {
+							location.href = "hopeshow.html";
+						}
+					},
+				});
+			}
+			getbookrack();
+			function getbookrack(){
+				$.ajax({
+					url:'loadbookrack.do',
+					type:'POST',
+					success:function(resp){
+						console.log(resp);
+						if(resp!=-1){
+							var data=eval("("+resp+")");
+							console.log(data);
+						}
+						
+						
+					}
+				})
+			}
+			
+			
+			
+
 		});
-		
-		$('#quanxuan').click(function(){
-			$('.check').prop("checked", true);
-		});
-		$('#qingkong').click(function(){
-			$('.check').prop("checked", false);
-		});
-	});
-</script>
+	</script>
+
 </html>
