@@ -6,7 +6,10 @@ $(function() {
 		success: function(resps) {
 			let data = eval("(" + resps + ")");
 			if (data != -1) {
-				$("#user_head_img").attr('src', "images/loginbackground.png");
+				if(data.haedurl!=null){
+					var url="headImg/"+data.haedurl;
+					$("#user_head_img").attr('src', url);
+				}
 				$("#usersname").html(data.username);
 				uname=data.username;
 			}
@@ -52,7 +55,10 @@ $(function() {
 					$("#userLogin").html("登录"), $("#userLogin").removeAttr('disabled');
 				} else if (resp == 1) {
 					$("#loginModal").modal("hide");
-					$("#user_head_img").attr('src', "images/loginbackground.png");
+					if(data.haedurl!=null){
+						var url1="headImg/"+data.haedurl;
+						$("#user_head_img").attr('src', url1);
+					}
 					$("#usersname").html(role.username);
 					$("#userLogin").html("登录"), $("#userLogin").removeAttr('disabled');
 					uname = role.username;

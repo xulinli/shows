@@ -31,7 +31,7 @@
 						</li>
 						<!--登录弹出框-->
 						<li class="login">
-							<a href="myselfMain.html" class="a globalLoginBtn"><img src="headImg/loginsuccess.png" /></a>
+							<a href="myselfMain.html" class="a globalLoginBtn"><img src="headImg/loginsuccess.png" id="heahimg0" /></a>
 						</li>
 						<!--登录框完结-->
 					</ul>
@@ -119,9 +119,11 @@
 		<div class="myMain">
 			<div class="myMain-left">
 				<div class="myMain-left1">
-					<img src="headImg/mymain.png" />
+					<img src="headImg/mymain.png" id="headImg" style="cursor: pointer;" />
+
+					<input type="file" style="display: none;" />
 					<ul>
-						<li class="huiyuan">会员用户</li>
+						<li class="huiyuan" id="vipname">会员用户</li>
 						<li class="huiyuan">ID:12344567900</li>
 					</ul>
 				</div>
@@ -166,7 +168,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</body>
 	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
@@ -174,5 +176,59 @@
 	<script src="js/hopeshow.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/sytem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#headImg").click(function() {
+				$("[type=file]").trigger("click");
+			})
+			$("[type=file]").on("change", function() {
+				if(this.files != null && this.files.length > 0) {
+					var file = this.files[0];
+					console.log(file);
+					var formdata = new FormData();
+					formdata.append("upload", file);
+					$.ajax({
+						url: 'headupload.do',
+						dataType: 'json',
+						type: 'POST',
+						async: 'false', //当async属性的值为false时是同步的，Ajax请求将整个浏览器锁死，只有ajax请求返回结果后，才执行ajax后面的alert语句	
+						data: formdata,
+						processData: false, //使数据不做任何的处理
+						contentType: false, //不设置Content-Type请求头
+						success: function(resp) {
+							if(resp == 0) {
+								location.href = "hopeshow.html";
+							} else if(resp == -1) {
+								alert("文件上传异常");
+							} else {
+								islogin();	
+							}
+						}
+					})
+				}
+			})
+	
+			islogin();	
+			function islogin() {
+				$.ajax({
+					url: 'islogin.do',
+					type: 'post', //HTTP请求类型
+					success: function(resps) {
+						let data = eval("(" + resps + ")");
+						if(data != -1) {
+							if(data.haedurl!=null){
+								var url="headImg/"+data.haedurl;
+								$("#headImg").attr('src', url);
+								$("#heahimg0").attr('src', url);
+							}
+							$("#vipname").html(data.username);
+						}else{
+							location.href = "hopeshow.html";
+						}
+					},
+				});
+			}
+		})
+	</script>
 
 </html>

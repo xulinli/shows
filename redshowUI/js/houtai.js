@@ -1,7 +1,7 @@
 $(function() {
 	/*用户管理*/
 	let nowpage = 1;
-	let perpage = 2;
+	let perpage = 10;
 	let page;
 	console.log(page);
 	//查询
@@ -34,6 +34,7 @@ $(function() {
 	//	指定页数
 	$("#gogogo	").click(function() {
 		let toPage = $("#pageText").val();
+		toPage=parseInt(toPage);
 		console.log(toPage);
 		if(toPage <= page) {
 			query(toPage, perpage);

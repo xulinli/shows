@@ -15,16 +15,19 @@ public class Users implements Serializable{
 	private String state;
 	private Double integral;
 	private String rolename;
+	private String haedurl;
 	
-	//增加
-//	private String status;
-//	private String msg;
-//	private String url;
-//	private String onepay_status;
+	
 
 	
 	
 	
+	public String getHaedurl() {
+		return haedurl;
+	}
+	public void setHaedurl(String haedurl) {
+		this.haedurl = haedurl;
+	}
 	public Integer getId() {
 		return id;
 	}
