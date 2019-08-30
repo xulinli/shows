@@ -30,7 +30,7 @@ public class IBookrackService implements BookrackService {
 		List<Books> notBuyList = bm.getNotBuyList(userid);
 		if(notBuyList!=null &&notBuyList.size()>0) {
 			for (Books book : orders) {
-				book.setState(0);//添加状态1，表示这个物品加入书架但是没有付款的
+				book.setState(1);//添加状态1，表示这个物品加入书架但是没有付款的
 			}
 			list.addAll(orders);
 		}
