@@ -242,6 +242,28 @@
 						if(resp!=-1){
 							var data=eval("("+resp+")");
 							console.log(data);
+							var body=$("#booksBody");
+							body.empty();
+							for(var item in data){
+								var li=$("<li></li>");
+								var it=$("<img src=headImg/"+data[item].books_url+".jpg /><br />")
+								li.append(it);
+								it=$("<span>书名："+data[item].books_names+"</span><br />");
+								li.append(it);
+								it=$("<span>作者："+data[item].books_another+"</span><br />")
+								li.append(it);
+								it=$("<span>币值："+data[item].books_price+"</span>");
+								li.append(it);
+								it=$("<input type='checkbox' class='check' />选中 ");
+								li.append(it);
+								if(0 == data[item].state){
+									it=$("<span style='color: pink;'>已购买</span>");
+								}else{
+									it=$("<span style='color: pink;'>请购买</span>");
+								}
+								li.append(it);
+								body.append(li);
+							}
 						}
 						
 						
