@@ -27,7 +27,9 @@ public class BookrackController {
 		Users user = (Users) req.getSession().getAttribute("user");
 		if(user!=null) {
 			List<Books> bookracks = bc.bookracks(user.getId());
+			System.out.println(bookracks);
 			if(bookracks!=null&& bookracks.size()>0) return bookracks;
+			
 		}
 		return -1;
 	}

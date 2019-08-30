@@ -1,0 +1,305 @@
+.paihang{
+	margin-left: 150px;
+	width: 80%;
+	height: 100%;
+}
+.paihang-right{
+	background-color: #EBEBEB;
+	float: left;
+	width: calc(100% - 30%);
+	height: 100%;
+}
+.paihang2 , .paihang3, .paihang4{
+	margin-left: 30px;
+	width: 90%;
+	height: 540px;
+} 
+.paihang1{
+	float: left;
+	margin-left: 40px;
+	width: 20%;
+	height: 500px;
+}
+.paihang1>ul>li{
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 18px;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	border-left: 2px solid white;
+}
+.paihang1>ul>li:hover{
+	border-left: 2px solid red;
+	color: red;
+}
+.paihang1>ul>li:active{
+	border-left: 2px solid red;
+	font-weight: 900;
+	color: red;
+}
+.paihang1>ul>li>span{
+	margin-left: 12px;
+}
+
+.paihang-right1{
+	margin-left: 20px;
+	width: 30%;
+	height: 500px;
+	float: left;
+	
+}
+.paihang-tou{
+	cursor: pointer;
+	font-weight: 900;
+	height: 50px;
+	font-size: 25px;
+	font-family: "新宋体";
+	border-bottom: 1px solid black;
+}
+.paihang-right1>.paihang-context>li{
+	cursor: pointer;
+	font-family: "微软雅黑";
+	line-height: 44px;
+	font-size: 16px;
+	width: 100%;
+	height: 44px;
+	border-bottom: 1px dotted green;
+}
+
+.paihang-right1>.paihang-context>li:hover{
+	color: #8A2BE2;
+}
+
+/*我的主页中的样式*/
+.myMain{
+	margin-left: 180px;
+	width: 70%;
+	height: 100%;
+}
+.myMain-left{
+	margin-top: 20px;
+	float: left;
+	width: 23%;
+	height: 400px;
+}
+.myMain-right{
+	margin-left: 20px;
+	float: left;
+	width: 73%;
+	height: 700px;
+}
+.myMain-left1{
+	text-align: center;
+	background-image: url(../daohangimg/main-bj.png);
+	width: 100%;
+	height: 150px;
+}
+.myMain-left1>img{
+	margin-top: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+.myMain-left .huiyuan{
+	cursor: pointer;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+.myMain-left .huiyuan:hover{
+	text-decoration: underline;
+}
+.myMain-left2{
+	width: 100%;
+	height: 250px;
+}
+.myMain-left2>ul>li{
+	border-left: 2px solid white;
+	cursor: pointer;
+	line-height: 40px;
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+}
+.myMain-left2>ul>li:hover{
+	border-left: 2px solid red;
+}
+.myMain-left2 span:hover{
+	color: #00FFFF;
+}
+.myMain-left2 span{
+	font-weight: 900;
+	color: red;
+	font-size: 16px;
+	margin-left: 15px;
+}
+.myMain-right1{
+	margin-top: 20px;
+	width: 100%;
+	height: 250px;
+}
+.piaojia{
+	line-height: 80px;
+	font-size: 20px;
+	font-weight: 900;
+	font-family: "微软雅黑";
+	float: left;
+	margin-left: 20px;
+}
+.dingdan{
+	line-height: 80px;
+	font-size: 20px;
+	font-weight: 900;
+	font-family: "微软雅黑";
+	color: white;
+	float: left;
+	margin-left: 20px;
+	border-left: 1px solid #8C8C8C;
+}
+.vipdengji{
+	line-height: 80px;
+	font-size: 20px;
+	font-weight: 900;
+	font-family: "微软雅黑";
+	float: left;
+	color: #999999;
+	margin-left: 5px;
+}
+.myMain-right1>ul{
+	width: 99%;
+	height: 80px;
+	border-bottom: 1px dotted #BBBBBB;
+}
+
+.yuepiao{
+	line-height: 80px;
+	float: left;
+	margin-left: 30px;
+	font-size: 14px;
+}
+.dingyue{
+	margin-top: 10px;
+	margin-left: 30px;
+}
+
+/*我的书架*/
+.myBooks-first{
+	margin-top: 20px;
+	width: 800px;
+	height: 500px;
+	border: 1px solid white;
+}
+.myBooks-first1>li{
+	width: 120px;
+	height: 200px;
+	margin-left: 80px;
+	margin-top: 30px;
+	float: left;
+}
+.myBooks-first1>li>span{
+	margin-left: 10px;
+	color: #5BC0DE;
+	font-size: 10px;
+}
+.myBooks-scend{
+	width: 800px;
+	height: 50px;
+}
+.shujia{
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 40px;
+}
+.myBooks-scend>span{
+	margin-left: 50px;
+}
+/*我的书架结束*/
+/*我的主页中的样式结束*/
+
+/*充值页面样式*/
+.many{
+	width: 100%;
+	height: 100px;
+	background-color: #CCFFEE;
+}
+.many>span{
+	font-family: "微软雅黑";
+	font-weight: 900;
+	font-size: 26px;
+	margin-left: 40px;
+}
+.many-center{
+	width: 80%;
+	height: 100%;
+	margin-left: 200px;
+}
+h6{
+	color: #A9A9A9;
+}
+.chongzhifangshi{
+	width: 100%;
+	height: 140px;
+}
+.chongzhifangshi>ul>li{
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+	width: 200px;
+	height: 50px;
+	list-style: none;
+	margin-left: 40px;
+	float: left;
+}
+.chongzhijine{
+	width: 700px;
+	height: 430px;
+}
+.chongzhijine>ul>li{
+	font-size: 14px;
+	cursor:  pointer;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 30px;
+	list-style: none;
+	width: 200px;
+	margin-top: 10px;
+	height: 50px;
+}
+#inp{
+	width: 50px;
+	height: 20px;
+}
+.xuanzhong{
+	border: 1px solid red;
+}
+.anniu>span{
+	color: #8C8C8C;
+	font-size: 12px;
+}
+.many-foot{
+	background-color: #E6E6E6;
+	margin-left: 200px;
+	text-align: center;
+	width: 80%;
+	height: 130px;
+}
+.many-foot>ul>li{
+	cursor : pointer;
+	line-height: 30px;
+	font-size: 12px;
+	color: #A9A9A9;
+	width: 200px;
+	height: 30px;
+	list-style: none;
+	float: left;
+}
+h5{
+	color: #A9A9A9;
+}
+.zhifu>img{
+	margin-left: 20px;
+	width: 200px;
+	height: 200px;
+}
+/*充值页面样式结束*/

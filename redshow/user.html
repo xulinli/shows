@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="title">用户展示</div>
+		<div class="userSearc">
+			<div class="search-left">
+				<span>
+					用户名：<input type="text" id="username" value="" />
+				</span>
+				<span>
+					年龄：<input type="text" id="ageFrom" value="" />岁--->
+				</span>
+				<span>
+					<input type="text" id="ageTo" value="" />岁
+				</span>
+				<span>
+					<input type="button" class="btn btn-group-xs" id="search" value="查询" />
+				</span>
+			</div>
+			<div class="search-right">
+				<button id="adduser" class="btn btn-primary" data-toggle="modal" data-target="#addModal">添加用户</button>
+			</div>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>用户名</th>
+					<th>性别</th>
+					<th>年龄</th>
+					<th>邮箱</th>
+					<th>电话</th>
+					<th>住址</th>
+					<th>拥有角色</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="dates">
+				
+			</tbody>
+		</table>
+		<div class="userCaoZuo">
+			<div class="userCaoZuo-left">
+				<span>当前页：</span><span id="nowpages"></span>/<span id="allpage"></span><span>每页显示10条数据</span>
+			</div>
+			<div class="userCaoZuo-right">
+				<span id="first"><img src="systemImg/page_first_1.gif"/></span>
+				<span id="prve"><img src="systemImg/page_back_1.gif"/></span>
+				
+				<span id="next"><img src="systemImg/page_next.gif"/></span>
+				<span id="last"><img src="systemImg/page_last.gif"/></span>
+				<span>转到第<input type="text" id="pageText" /></span>
+				<span id="gogogo"><img src="systemImg/go.gif"/></span>
+			</div>
+		</div>
+		
+		<!-- Modal添加 -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">添加用户</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul class="regleft">
+							<li>账号：</li>
+							<li>密码：</li>
+							<li>确认密码：</li>
+							<li>性别：</li>
+							<li>年龄：</li>
+							<li>邮箱：</li>
+							<li>电话：</li>
+							<li>地址：</li>
+							<li>角色选择：</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="regright">
+							<li><input type="text" class="username" /> <span class="tishi"></span>
+							</li>
+							<li><input type="password" class="pwd" /> <span class="tishimm"></span></li>
+							<li><input type="password" class="newpwd" /> <span class="tishinewmm"></span></li>
+							<li><input type="radio" name="sex" value="男" class="sex"
+								checked="checked" />男 <input type="radio" name="sex" value="女"
+								class="sex" />女</li>
+							<li><input type="text" id="age" /></li>
+							<li><input type="text" id="email" /></li>
+							<li><input type="text" id="phone" /></li>
+							<li><input type="text" id="address" /></li>
+							<li>
+								<input type="radio" name="role" class="role" value="1" />系统管理员
+								<input type="radio" name="role" class="role" value="2" />普通管理员
+								<input type="radio" name="role" class="role" value="3" />商户
+								<input type="radio" name="role" class="role" value="4" />已注册用户
+								<input type="radio" name="role" class="role" value="5" />游客
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" class="close">关闭</button>
+					<button type="button" class="btn btn-primary" id="zhuce_add">新增</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--model添加结束-->
+	
+	<!-- Modal修改 -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">修改用户</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul class="regleft">
+							<li>账号：</li>
+							<li>性别：</li>
+							<li>年龄：</li>
+							<li>邮箱：</li>
+							<li>电话：</li>
+							<li>地址：</li>
+							<li>所属角色：</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="regright">
+							<li><input type="text" class="username1" /> <span class="tishi"></span>
+							</li>
+							<li><input type="radio" name="sex" value="男" id="sex"
+								checked="checked" />男 <input type="radio" name="sex" value="女"
+								id="sex" />女</li>
+							<li><input type="text" class="age" /></li>
+							<li><input type="text" class="email" /></li>
+							<li><input type="text" class="phone" /></li>
+							<li><input type="text" class="address" /></li>
+							<li>
+								<input type="radio" name="role" class="role" value="1" />系统管理员
+								<input type="radio" name="role" class="role" value="2" />普通管理员
+								<input type="radio" name="role" class="role" value="3" />商户
+								<input type="radio" name="role" class="role" value="4" />已注册用户
+								<input type="radio" name="role" class="role" value="5" />游客
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary" id="change">修改</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--model添加结束-->
+	
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script type="text/javascript" src="js/houtai.js" ></script>
+</html>
